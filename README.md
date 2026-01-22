@@ -6,28 +6,28 @@ This project demonstrates my ability to design **real-world authentication flows
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔐 **User Authentication**
+- **User Authentication**
   - Secure signup with password hashing (bcrypt)
   - JWT-based authentication with HttpOnly cookies
   - Logout with proper session invalidation
 
-- 📧 **Email Verification**
+- **Email Verification**
   - Verification link sent on signup
   - Token expiration handling
   - Resend verification support
 
-- 🔑 **OTP Login (2-Step Authentication)**
+- **OTP Login (2-Step Authentication)**
   - One-time passcode sent to email
   - Time-limited OTP validation
   - OTP verification before dashboard access
 
-- 👤 **User Profile**
+- **User Profile**
   - Avatar upload & removal
   - Protected routes (dashboard, profile, settings)
 
-- 🎨 **Modern UI**
+- **Modern UI**
   - Responsive design
   - Animated search input
   - Gradient-based action buttons
@@ -35,7 +35,7 @@ This project demonstrates my ability to design **real-world authentication flows
 
 ---
 
-## 🖥️ Screenshots
+## Screenshots
 
 ### Landing Page
 ![Landing Page](screenshots/landing.png)
@@ -49,11 +49,11 @@ This project demonstrates my ability to design **real-world authentication flows
 ### Dashboard
 ![Dashboard](screenshots/dashboard.png)
 
-> 📌 Screenshots are stored in the `/screenshots` folder.
+> Screenshots are stored in the `/screenshots` folder.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Frontend**
   - Next.js (App Router)
@@ -77,7 +77,7 @@ This project demonstrates my ability to design **real-world authentication flows
 
 ---
 
-## 🔒 Security Practices
+## Security Practices
 
 - Passwords are **never stored in plaintext**
 - JWT stored in **HttpOnly cookies**
@@ -87,9 +87,9 @@ This project demonstrates my ability to design **real-world authentication flows
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/TariqLisse/Login-Signup-Template.git
+cd Login-Signup-Template
