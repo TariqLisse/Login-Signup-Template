@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "react-phone-input-2/lib/style.css";
+
+@layer utilities {
+  .animate-pulse-yellow {
+    animation: pulse-yellow 3s ease-in-out infinite;
+  }
+  .animate-pulse-red {
+    animation: pulse-red 3s ease-in-out infinite;
+  }
+  .animate-pulse-purple {
+    animation: pulse-purple 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-green {
+    animation: pulse-green 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    50% { box-shadow: 0 0 20px 5px rgba(34, 197, 94, 0.9); }
+  }
+
+  @keyframes pulse-yellow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7); }
+    50% { box-shadow: 0 0 20px 5px rgba(250, 204, 21, 0.9); }
+  }
+  @keyframes pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    50% { box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.9); }
+  }
+  @keyframes pulse-purple {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+    50% { box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.9); }
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes flicker-once {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+    text-shadow: none;
+  }
+  18%, 22%, 25%, 53%, 57% {
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow:
+      0 0 4px currentColor,
+      0 0 11px currentColor,
+      0 0 19px currentColor,
+      0 0 40px currentColor;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow:
+      0 0 6px currentColor,
+      0 0 12px currentColor,
+      0 0 20px currentColor;
+  }
+}
+
+.flicker-once {
+  animation: flicker-once 2.5s ease forwards;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(0) scale(1.02);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 2.2s ease forwards;
+}
+
+/* ===== Fix react-phone-input-2 alignment ===== */
+.react-tel-input .form-control {
+  width: 100% !important;
+  padding-left: 60px !important; /* fixes overlap with flags */
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  font-size: 14px;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none !important;
+  background: transparent !important;
+}
+
+.react-tel-input .selected-flag {
+  padding-left: 10px !important; /* adjust spacing */
+}
+
