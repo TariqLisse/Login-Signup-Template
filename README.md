@@ -38,16 +38,19 @@ This project demonstrates my ability to design **real-world authentication flows
 ## Screenshots
 
 ### Landing Page
-![Landing Page](screenshots/landing.png)
+![Landing Page](screenshots/Landing Page)
 
 ### Sign Up
-![Sign Up](screenshots/signup.png)
+![Sign Up](screenshots/Sign Up Page)
 
-### Sign In + OTP Verification
-![Sign In](screenshots/signin-otp.png)
+### Sign In 
+![Sign In](screenshots/Sign In Page)
+
+### OTP Verification
+![Authentication](screenshots/Authentication)
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Home Page)
 
 > Screenshots are stored in the `/screenshots` folder.
 
