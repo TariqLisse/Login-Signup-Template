@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Login & Signup System – EGOBAR
+
+A modern authentication system built with **Next.js App Router**, featuring secure signup, email verification, OTP-based login, and JWT authentication.
+
+This project demonstrates my ability to design **real-world authentication flows**, handle **secure credentials**, and build **polished UI experiences**.
+
+---
+
+##  Features
+
+- **User Authentication**
+  - Secure signup with password hashing (bcrypt)
+  - JWT-based authentication with HttpOnly cookies
+  - Logout with proper session invalidation
+
+- **Email Verification**
+  - Verification link sent on signup
+  - Token expiration handling
+  - Resend verification support
+
+- **OTP Login (2-Step Authentication)**
+  - One-time passcode sent to email
+  - Time-limited OTP validation
+  - OTP verification before dashboard access
+
+- **User Profile**
+  - Avatar upload & removal
+  - Protected routes (dashboard, profile, settings)
+
+- **Modern UI**
+  - Responsive design
+  - Animated search input
+  - Gradient-based action buttons
+  - Clean dashboard layout
+
+---
+
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing.png)
+
+### Sign Up
+![Sign Up](screenshots/signup.png)
+
+### Sign In + OTP Verification
+![Sign In](screenshots/signin-otp.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+> Screenshots are stored in the `/screenshots` folder.
+
+---
+
+## Tech Stack
+
+- **Frontend**
+  - Next.js (App Router)
+  - React
+  - Tailwind CSS
+  - React Icons
+
+- **Backend**
+  - Next.js API Routes
+  - Prisma ORM
+  - PostgreSQL
+
+- **Authentication & Security**
+  - JWT (HttpOnly cookies)
+  - bcrypt password hashing
+  - Email verification tokens
+  - OTP-based login verification
+
+- **Email**
+  - Nodemailer (Gmail SMTP)
+
+---
+
+## Security Practices
+
+- Passwords are **never stored in plaintext**
+- JWT stored in **HttpOnly cookies**
+- Environment variables used for all secrets
+- Verification & OTP tokens expire automatically
+- Protected routes redirect unauthenticated users
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/TariqLisse/Login-Signup-Template.git
+cd Login-Signup-Template
